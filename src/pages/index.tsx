@@ -1,17 +1,23 @@
 import {
+  Box,
   Text,
   Code,
+  Flex,
 } from '@chakra-ui/react'
 import { ConnectWallet } from '@thirdweb-dev/react'
+import { NextPage } from 'next/types'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
-import Main from '../components/Main'
 import CTA from '../components/CTA'
 
-const Index = () => (
+const Index: NextPage = () => (
   <Section>
     <Hero title="Interoperable" />
-    <Main>
+    <Flex
+      mt="24px"
+      mx="auto"
+      flexDir="column"
+    >
       <Text color="text">
         Cross-Chain Liquidity Provider Token Deposits and Withdrawls
         utilizing General Message Passing Protocol with
@@ -22,9 +28,11 @@ const Index = () => (
         <Code>Axelar</Code>
         .
       </Text>
-      <ConnectWallet />
-    </Main>
-    <CTA />
+      <Box mt="48px">
+        <ConnectWallet />
+      </Box>
+      <CTA />
+    </Flex>
   </Section>
 )
 
