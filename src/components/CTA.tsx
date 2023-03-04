@@ -5,11 +5,11 @@ import Container from './Container'
 const CTA = (): JSX.Element => (
   <Container
     flexDirection="row"
-    position="fixed"
-    bottom={0}
     width="full"
-    maxWidth="3xl"
     py={3}
+    mt="256px"
+    mx="auto"
+    mb="24px"
   >
     <Button
       as={ChakraLink}
@@ -19,7 +19,7 @@ const CTA = (): JSX.Element => (
       colorScheme="green"
       rounded="button"
       flexGrow={1}
-      mx={2}
+      mr={2}
       width="full"
     >
       Devpost
@@ -32,7 +32,7 @@ const CTA = (): JSX.Element => (
       colorScheme="green"
       rounded="button"
       flexGrow={3}
-      mx={2}
+      ml={2}
       width="full"
     >
       View Repo
