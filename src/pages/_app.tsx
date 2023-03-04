@@ -7,7 +7,10 @@ import theme from '../../theme'
 import Container from '../components/Container'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <ThirdwebProvider activeChain={MoonbaseAlpha}>
+  <ThirdwebProvider
+    activeChain={MoonbaseAlpha}
+    supportedChains={[MoonbaseAlpha]}
+  >
     <ChakraProvider resetCSS theme={theme}>
       <Head>
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
