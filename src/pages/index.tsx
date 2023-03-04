@@ -1,63 +1,31 @@
 import {
-  Link as ChakraLink,
   Text,
   Code,
-  List,
-  ListIcon,
-  ListItem,
 } from '@chakra-ui/react'
-import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import { ConnectWallet } from '@thirdweb-dev/react'
 import Hero from '../components/Hero'
-import Container from '../components/Container'
+import Section from '../components/Section'
 import Main from '../components/Main'
 import CTA from '../components/CTA'
-import Footer from '../components/Footer'
 
 const Index = () => (
-  <Container height="100vh">
-    <Hero title="with-chakra-ui-typescript" />
+  <Section>
+    <Hero title="Interoperable" />
     <Main>
       <Text color="text">
-        Example repository of
+        Cross-Chain Liquidity Provider Token Deposits and Withdrawls
+        utilizing General Message Passing Protocol with
         {' '}
-        <Code>Next.js</Code>
-        {' '}
-        +
-        <Code>chakra-ui</Code>
+        <Code>Moonbeam</Code>
         {' '}
         +
-        {' '}
-        <Code>TypeScript</Code>
+        <Code>Axelar</Code>
         .
       </Text>
-
-      <List spacing={3} my={0} color="text">
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink
-            isExternal
-            href="https://chakra-ui.com"
-            flexGrow={1}
-            mr={2}
-          >
-            Chakra UI
-            <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-        <ListItem>
-          <ListIcon as={CheckCircleIcon} color="green.500" />
-          <ChakraLink isExternal href="https://nextjs.org" flexGrow={1} mr={2}>
-            Next.js
-            <LinkIcon />
-          </ChakraLink>
-        </ListItem>
-      </List>
+      <ConnectWallet />
     </Main>
-    <Footer>
-      <Text>Next ❤️ Chakra</Text>
-    </Footer>
     <CTA />
-  </Container>
+  </Section>
 )
 
 export default Index

@@ -14,7 +14,7 @@ const CTA = (): JSX.Element => (
     <Button
       as={ChakraLink}
       isExternal
-      href="https://chakra-ui.com"
+      href=""
       variant="outline"
       colorScheme="green"
       rounded="button"
@@ -22,12 +22,12 @@ const CTA = (): JSX.Element => (
       mx={2}
       width="full"
     >
-      chakra-ui
+      Devpost
     </Button>
     <Button
       as={ChakraLink}
       isExternal
-      href="https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript"
+      href="https://github.com/renchris/interop-web-app"
       variant="solid"
       colorScheme="green"
       rounded="button"
