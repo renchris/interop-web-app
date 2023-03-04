@@ -13,6 +13,19 @@ const breakpoints = {
   xl: '80em',
 }
 
+const config = {
+  initialColorMode: 'dark',
+}
+
+const styles = {
+  global: () => ({
+    body: {
+      bgColor: '#0a0a0b',
+      background: 'url(./grid.svg)',
+    },
+  }),
+}
+
 const theme = extendTheme({
   semanticTokens: {
     colors: {
@@ -39,6 +52,8 @@ const theme = extendTheme({
   fonts,
   breakpoints,
   components,
+  config,
+  styles,
 })
 
 export default theme
