@@ -9,6 +9,7 @@ import { NextPage } from 'next/types'
 import Hero from '../components/Hero'
 import Section from '../components/Section'
 import CTA from '../components/CTA'
+import BalanceCard from '../components/BalanceCard'
 
 const Index: NextPage = () => (
   <Section>
@@ -28,9 +29,10 @@ const Index: NextPage = () => (
         <Code>Axelar</Code>
         .
       </Text>
-      <Box mt="48px">
+      <Box my="48px">
         <ConnectWallet />
       </Box>
+      <BalanceCard />
       <CTA />
     </Flex>
   </Section>
