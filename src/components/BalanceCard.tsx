@@ -38,9 +38,9 @@ const BalanceCard = () => {
       (matchedStr) => `"${matchedStr.substring(0, matchedStr.length - 1)}":`,
     )
     const secretObject = JSON.parse(jsonStr)
-    covalentApiKey = secretObject.COVALENT_API_KEY
+    covalentApiKey = secretObject.NEXT_PUBLIC_COVALENT_API_KEY
   } else {
-    covalentApiKey = process.env.COVALENT_API_KEY || ''
+    covalentApiKey = process.env.NEXT_PUBLIC_COVALENT_API_KEY || ''
   }
 
   const address = useAddress()
