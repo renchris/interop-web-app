@@ -7,12 +7,10 @@ const fonts = {
 }
 
 const breakpoints = {
-  sm: '40em',
-  md: '52em',
-  lg: '64em',
-  xl: '80em',
+  sm: '375px', // 23.4375 em
+  md: '768px', // 48 em
+  lg: '1024px', // 64 em
 }
-
 const config = {
   initialColorMode: 'dark',
 }
@@ -29,6 +27,10 @@ const styles = {
 const theme = extendTheme({
   semanticTokens: {
     colors: {
+      backgroundBlack: '#000000',
+      hairline: '#D4D4D8',
+      hairlineBackground: '#27272A',
+      cardBackground: '#131215',
       text: {
         default: '#ade3b8',
       },

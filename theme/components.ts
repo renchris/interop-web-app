@@ -31,6 +31,31 @@ const components = {
       },
     },
   },
+  Text: {
+    baseStyle: {
+      fontWeight: 'normal',
+    },
+    sizes: {
+      hairline: {
+        color: 'hairline',
+        fontSize: '9px',
+        textTransform: 'uppercase',
+        lineHeight: '16px',
+        letterSpacing: '1px',
+      },
+      button: {
+        fontSize: '14px',
+        fontWeight: '500',
+        lineHeight: '20px',
+      },
+      subtitle: {
+        fontWeight: '700',
+        fontSize: '20px',
+        lineHeight: '28px',
+        color: 'white',
+      },
+    },
+  },
 }
 
 export default components
