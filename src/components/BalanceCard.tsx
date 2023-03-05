@@ -4,11 +4,12 @@ import {
   Box,
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import { useAddress } from '@thirdweb-dev/react'
+
 import DottedCard from './DottedCard'
 import MainCard from './MainCard'
 
-const BalanceCard = () => {
+const BalanceCard = ({ network, title, address }
+: { network: string, title: string, address: string }) => {
   interface IToken {
     balance: string,
     balance_24hr: string,
@@ -43,10 +44,8 @@ const BalanceCard = () => {
     covalentApiKey = process.env.NEXT_PUBLIC_COVALENT_API_KEY || ''
   }
 
-  const address = useAddress()
-
   const getTokenBalance = async () => {
-    const apiUrl = `https://api.covalenthq.com/v1/moonbeam-moonbase-alpha/address/${address}/balances_v2/?key=${covalentApiKey}`
+    const apiUrl = `https://api.covalenthq.com/v1/${network}/address/${address}/balances_v2/?key=${covalentApiKey}`
     const result = await fetch(apiUrl)
     const response = await result.json()
     console.log(response.data.items)
@@ -77,7 +76,7 @@ const BalanceCard = () => {
       >
         <Box>
           <Text size="subtitle">
-            Token Balances
+            {title}
           </Text>
           { items && (
           <Box width="inherit">
