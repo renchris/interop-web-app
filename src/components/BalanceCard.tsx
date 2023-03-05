@@ -9,8 +9,6 @@ import DottedCard from './DottedCard'
 import MainCard from './MainCard'
 
 const BalanceCard = () => {
-  let covalentApiKey: string
-
   interface IToken {
     balance: string,
     balance_24hr: string,
@@ -32,25 +30,17 @@ const BalanceCard = () => {
 
   const [items, setItems] = useState<Array<IToken>>([])
 
+  let covalentApiKey: string
+
   if (process.env.secrets) {
     const jsonStr = process.env.secrets.replace(
       /(\w+:)|(\w+ :)/g,
       (matchedStr) => `"${matchedStr.substring(0, matchedStr.length - 1)}":`,
     )
-
     const secretObject = JSON.parse(jsonStr)
-    covalentApiKey = secretObject.NEXT_PUBLIC_COVALENT_API_KEY
-    console.log('==process.env.secrets==')
-    console.log(process.env.secrets)
-    console.log('===\n')
-    console.log('==jsonStr==')
-    console.log(jsonStr)
-    console.log('===\n')
-    console.log('==secretObject==')
-    console.log(secretObject)
-    console.log('===\n')
+    covalentApiKey = secretObject.COVALENT_API_KEY
   } else {
-    covalentApiKey = process.env.NEXT_PUBLIC_COVALENT_API_KEY || ''
+    covalentApiKey = process.env.COVALENT_API_KEY || ''
   }
 
   const address = useAddress()

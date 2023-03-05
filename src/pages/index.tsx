@@ -10,6 +10,7 @@ import Hero from '../components/Hero'
 import Section from '../components/Section'
 import CTA from '../components/CTA'
 import BalanceCard from '../components/BalanceCard'
+import SmartContractCard from '../components/SmartContractCard'
 
 const Index: NextPage = () => (
   <Section>
@@ -33,6 +34,7 @@ const Index: NextPage = () => (
         <ConnectWallet />
       </Box>
       <BalanceCard />
+      <SmartContractCard />
       <CTA />
     </Flex>
   </Section>
