@@ -18,6 +18,7 @@
     "@thirdweb-dev/chains": "^0.1.5",
     "@thirdweb-dev/react": "^3.9.5",
     "@thirdweb-dev/sdk": "^3.9.5",
+    "api": "^5.0.7",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
