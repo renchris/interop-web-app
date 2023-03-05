@@ -37,8 +37,18 @@ const BalanceCard = () => {
       /(\w+:)|(\w+ :)/g,
       (matchedStr) => `"${matchedStr.substring(0, matchedStr.length - 1)}":`,
     )
+
     const secretObject = JSON.parse(jsonStr)
     covalentApiKey = secretObject.NEXT_PUBLIC_COVALENT_API_KEY
+    console.log('==process.env.secrets==')
+    console.log(process.env.secrets)
+    console.log('===\n')
+    console.log('==jsonStr==')
+    console.log(jsonStr)
+    console.log('===\n')
+    console.log('==secretObject==')
+    console.log(secretObject)
+    console.log('===\n')
   } else {
     covalentApiKey = process.env.NEXT_PUBLIC_COVALENT_API_KEY || ''
   }
